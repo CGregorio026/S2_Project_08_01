@@ -15,13 +15,53 @@
 
 /* Table Styles */
 /* 
-hahahaha
+I add a linear gradient using the background and gradient styles, and pick two colors to allow the gradient to change color. I also add a 5 pixel solid grey border specified in the third style.
 */
-table {}
+table {
+    background: -moz-linear-gradient(to bottom, rgb(190, 215, 255), black);
+    background: linear-gradient(to bottom, rgb(190, 215, 255), black);
+    border: 5px solid grey;
+}
 
+/* 
+This is a rule that adds styles to both the td and th of the table.
+*/
+table th,
+table td {
+    border: 3px solid gray;
+    line-height: 1.4em;
+    padding: 8px;
+}
+
+/* 
+Changes the color of the text and the background, and adds no bold text.
+*/
+table th {
+    background-color: black;
+    color: rgb(130, 210, 255);
+    font-weight: normal;
+}
+
+/* 
+Changes the font size and color, and aligns the text to the top of the element.
+*/
+table td {
+    color: white;
+    font-size: 0.9em;
+    vertical-align: top;
+}
 
 /* Column Styles */
+col#firstCol {
+    width: 24%;
+}
 
+col.dataCols {
+    width: 19%;
+}
 
 
 /* Table Header Styles */
+tr {
+    height: 60px;
+}
