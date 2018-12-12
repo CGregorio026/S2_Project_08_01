@@ -6,10 +6,10 @@
    Case Problem 1
 
    Tables Style Sheet
-   Author: 
-   Date:   
+   Author: Christian Gregorio
+   Date:   12.10.18
 
-   Filename:         mi_tables.css
+   Filename:mi_tables.css
 
 */
 
@@ -18,6 +18,7 @@
 I add a linear gradient using the background and gradient styles, and pick two colors to allow the gradient to change color. I also add a 5 pixel solid grey border specified in the third style.
 */
 table {
+    background: -webkit-linear-gradient(to bottom, rgb(190, 215, 255), black);
     background: -moz-linear-gradient(to bottom, rgb(190, 215, 255), black);
     background: linear-gradient(to bottom, rgb(190, 215, 255), black);
     border: 5px solid grey;
@@ -62,6 +63,21 @@ col.dataCols {
 
 
 /* Table Header Styles */
-tr {
+thead tr {
     height: 60px;
+}
+
+/* 
+This selects only the first tr and the first th. Adding in just first of type for th makes both the select a plan and the price for the starter plan to be in 2em.
+*/
+thead tr:first-of-type th:first-of-type {
+    font-size: 2em;
+}
+
+/* 
+This targets everything except the select a plan in the first row.
+*/
+thead tr:first-of-type th:not(:first-of-type) {
+    background: transparent;
+    color: black;
 }
